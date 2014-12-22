@@ -3,3 +3,4 @@ models/*.iml
 datahandlers/*.iml
 data/*.tsv
 .DS_Store
+*.pyc
