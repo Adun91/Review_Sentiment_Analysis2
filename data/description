@@ -1,0 +1,5 @@
+Data directory should contain files:
+- train.tsv
+- test.tsv
+
+Download them from challenge page on Kaggle. Do not remove them from .gitignore!
