@@ -25,7 +25,7 @@ class Layer(object):
         pass
 
     def output(self):
-        t_data = T.matrix('data')
+        t_data = T.tensor4('data')
         t_function = theano.function(inputs=[t_data],
                                      outputs=self.t_output(t_data, self.parameters()))
         return t_function

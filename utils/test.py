@@ -1,6 +1,7 @@
 __author__ = 'mateuszopala'
 import numpy as np
 import theano
+import theano.tensor as T
 
 
 def sigmoid(x):
@@ -8,7 +9,7 @@ def sigmoid(x):
 
 
 def relu(x):
-    return np.maximum(0, x)
+    return T.maximum(0, x)
 
 
 def softmax(w):

@@ -1,17 +1,17 @@
 __author__ = 'mateuszopala'
 
-from models.Layer import Layer
+from models.layer import Layer
 import theano
 import theano.tensor as T
 from theano.tensor.nnet import conv2d
 from theano.tensor.signal.downsample import max_pool_2d
-from utils.test import *
 from theano.tensor.shared_randomstreams import RandomStreams
 from functools import *
+import numpy as np
 
 
 class Convolutional(Layer):
-    def __init__(self, input_shape, filter_shape, pool_size=(2, 2), activation=relu):
+    def __init__(self, input_shape, filter_shape, pool_size=(2, 2), activation=T.nnet.sigmoid):
         self.is_initialized = False
         self.input_shape = input_shape
         self.filter_shape = filter_shape
